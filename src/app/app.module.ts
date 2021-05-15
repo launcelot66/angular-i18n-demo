@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +18,8 @@ export function createTranslateLoader(http: HttpClient) {
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    TranslateHttpLoader,
     TranslateModule.forRoot(
       {
         loader: {
@@ -27,7 +29,9 @@ export function createTranslateLoader(http: HttpClient) {
         },
         defaultLanguage: 'en'
       }
-    )
+    ),
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
