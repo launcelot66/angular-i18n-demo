@@ -16,8 +16,8 @@ export class AppComponent {
     translateServeice.addLangs(this.supportedLanguages);
     translateServeice.setDefaultLang(this.supportedLanguages[0]);
 
-    const browserLanguage = translateServeice.getBrowserLang();
-    translateServeice.use(browserLanguage);
+    //const browserLanguage = translateServeice.getBrowserLang();
+    //translateServeice.use(browserLanguage);
 
   }
 
